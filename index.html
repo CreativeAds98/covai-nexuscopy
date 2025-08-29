@@ -50,17 +50,21 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
+          <li class="dropdown">
+  <a href="index.html#hero"><span>C</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  <ul>
+    <li>
+      <a href="product1.html"  style="background-color:  #2baf66;">Back Office 4.0</a>
+    </li>
+    <li>
+      <a href="product2.html">Connected Enterprise Studio</a>
+    </li>
+  </ul>
+</li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>C</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="product1.html">Back Office 4.0</a></li>
-              <li><a href="product2.html">Connected Enterprise studio</a></li>
-            </ul>
-          </li>
+    <!--  <li><a href="index.html#team">Team</a></li> -->
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -80,7 +84,7 @@
 
       <div class="container d-flex flex-column align-items-center" style="text-align: center;">
         <h2 data-aos="fade-up" data-aos-delay="100">STANDARDIZE. DIGITIZE. OPTIMIZE.</h2>
-        <p data-aos="fade-up" data-aos-delay="200">We empower global enterprises with intelligent, secure, and efficient Back Office 4.0 <br>operations — from Finance and HR to Compliance and Customer Support.</p>
+        <p data-aos="fade-up" data-aos-delay="200">We empower global enterprises with intelligent, secure, and efficient <span style="font-weight: bold; color:  #ff4a17;">Back Office 4.0</span> <br>operations — from Finance and HR to Compliance and Customer Support.</p>
         <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
           <a href="#vision" class="btn-get-started">Start Your Transformation</a>
           <a href="#clients" class="glightbo btn-watch-video d-flex align-items-center"><i class="bi bi-activity"></i><span>See Capabilities in Action</span></a>
@@ -91,15 +95,18 @@
 
        <!-- About Section -->
   <section id="about" class="about section">
-  <div class="container">
+    <div class="container section-title" data-aos="fade-up">
+    <h2>About Us</h2>
+        <p>Empowering Modern Back Offices with Digital Intelligence<br>       
+      </div>
+    <div class="container" >
     <div class="row gy-4">
-<h2 class="text-uppercase small fw-bold mb-1 text-center">About Us</h2>
-
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <h3>Empowering Modern Back Offices with Digital Intelligence</h3>
         <p class="fw-semibold">Built on Trust. Backed by Technology. Driven by Outcomes.</p>
-        <img src="assets/img/about.png" class="img-fluid rounded-4 mb-4 w-75" alt="About image">
-        <p>
+        <div class="position-relative">
+        <img src="assets/img/about.png" class="img-fluid rounded-4 " style="width:100%; height:350px"; alt="About image">
+        </div>
+        <p  style="margin-top:20px;">
           <strong>Who We Are</strong><br>
           We are a next-generation shared services partner reimagining back-office operations through a powerful blend of domain expertise, digital technologies, and GenAI copilots. From Finance & HR to Reporting & Compliance, we help organizations transition from transactional to transformational.<br><br>
           With every engagement, our goal is simple — deliver accuracy, agility, and assurance in every task.
@@ -108,14 +115,13 @@
 
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
         <div class="content ps-0 ps-lg-5">
-          <p class="fst-italic">
             <strong>Why Us</strong>
-          </p>
+         
           <ul>
-            <li><i class="bi bi-check-circle-fill"></i> <span> 98%+ accuracy across A/P, A/R, Payroll, GL, and Reporting</span></li>
-            <li><i class="bi bi-check-circle-fill"></i> <span> SLA compliance > 100% through real-time dashboards</span></li>
-            <li><i class="bi bi-check-circle-fill"></i> <span> Continuous improvement powered by Kaizen and automation</span></li>
-            <li><i class="bi bi-check-circle-fill"></i> <span> Policy-trained GenAI copilots built for contextual understanding</span></li>
+            <li><i class="bi bi-chevron-right"></i> <span> 98%+ accuracy across A/P, A/R, Payroll, GL, and Reporting</span></li>
+            <li><i class="bi bi-card-checklist"></i> <span> SLA compliance > 100% through real-time dashboards</span></li>
+            <li><i class="bi bi-check2-all"></i> <span> Continuous improvement powered by Kaizen and automation</span></li>
+            <li><i class="bi bi-easel"></i> <span> Policy-trained GenAI copilots built for contextual understanding</span></li>
             <li><i class="bi bi-check-circle-fill"></i> <span> ITIL-aligned delivery with full auditability</span></li>
           </ul>
           <p>
@@ -133,28 +139,24 @@
 </section>
 <!-- /About Section -->
 
-    <!-- Vision Section -->
+   
 <!-- Vision Section -->
-<section id="vision" class="about section">
-  <div class="container">
-
+<section id="vision" class="about section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Vision</h2>
+        <p>Empowering Operational Excellence Through Digital Intelligence</p>
+       <h5 class="text-center" style="margin-top:15px;">Your Trusted Back Office Partner – Designed for Scale, Built for Insight</h5> 
+      </div>
     <!-- Vision Heading -->
-    <div class="text-center mb-5">
-      <div class="vision-subtitle text-muted">Our Vision</div>
-      <h3 class="vision-title fw-bold">
-        Empowering Operational Excellence Through Digital Intelligence</h3>
-       <h5> Your Trusted Back Office Partner – Designed for Scale, Built for Insight</h5>
-      
-    </div>
-
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
     <!-- Vision Cards -->
     <div class="row g-4">
       <!-- Card 1 -->
       <div class="col-md-4">
         <div class="vision-card text-center h-100 p-4 border rounded shadow-sm" data-aos="fade-up">
           <div style="font-size: 48px;" class="mb-3">💼</div>
-          <h4 class="mb-2">Operational Precision</h4>
-          <p class="fw-semibold text-muted text-start">
+          <h3 class="mb-2">Operational Precision</h3>
+          <p>
             We bring discipline, accuracy, and consistency to every process we touch. With well-documented SOPs, SLA commitments, and layered QA, our team ensures that no task is just transactional — it’s a step toward excellence.
           </p>
         </div>
@@ -164,8 +166,8 @@
       <div class="col-md-4">
         <div class="vision-card text-center h-100 p-4 border rounded shadow-sm" data-aos="fade-up">
           <div style="font-size: 48px;" class="mb-3">⚙</div>
-          <h4 class="mb-2">Agility in Service</h4>
-          <p class="fw-semibold text-muted text-start">
+          <h3 class="mb-2">Agility in Service</h3>
+          <p>
             At CovAI Nexus, responsiveness is at the heart of our delivery model. Whether it's HR onboarding, payroll runs, or financial reconciliations, our team works in your time zone, speaks your process language, and moves fast with confidence.
           </p>
         </div>
@@ -175,8 +177,8 @@
       <div class="col-md-4">
         <div class="vision-card text-center h-100 p-4 border rounded shadow-sm" data-aos="fade-up">
           <div style="font-size: 48px;" class="mb-3">💰</div>
-          <h4 class="mb-2">Continuous Value Creation</h4>
-          <p class="fw-semibold text-muted text-start">
+          <h3 class="mb-2">Continuous Value Creation</h3>
+          <p>
             We’re not just about cost savings — we’re about outcomes. Our services are designed to grow with you, integrating automation, analytics, and best practices to deliver measurable business impact quarter after quarter.
           </p>
         </div>
@@ -293,7 +295,7 @@
                 <a href="service2-details.html" class="stretched-link">
                   <h3>HR & Payroll Operations</h3>
                 </a>
-                <p>End-to-end HR support—from onboarding to payroll—ensures smooth employee lifecycle management and secure records.</p>
+                <p>"End-to-end HR—from onboarding to payroll—streamlines employee management and secures records</p>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -345,19 +347,14 @@
     <section id="features" class="features section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Execution Model</h2>
-        <p class="text-uppercase text-muted fw-semibold">A Structured, Zero-Disruption Approach to Build, Transfer & Scale Back Office Operations</p>
-     
- </div>
-      <div class="container" data-aos="fade-up">
-           <div class="row justify-content-center text-center">
-      <div class="col-lg-10">
-<p class="text-muted mt-3 mb-4" style="font-size: 0.875rem;">
+        <p>A Structured, Zero-Disruption Approach to Build, Transfer & Scale Back Office Operations</p>
+        <br>
+         <p class="text-center" style="font-size: 0.875rem;">
   We follow a proven 4-phase execution methodology designed to build trust, reduce transition risks, and deliver SLA-driven outcomes—from initial discovery to ongoing operations.
 </p>
-
-      </div>
-   
-     </div>
+ </div>
+      <div class="container" data-aos="fade-up">
+        <!-- Tab Nav -->
         <ul class="nav nav-tabs row  d-flex" data-aos="fade-up" data-aos-delay="100">
           <li class="nav-item col-3">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
@@ -863,14 +860,16 @@
     </section>
      /Portfolio Section -->
 
-    <!-- Team Section -->
+     
+    <!-- Team Section
+
     <section id="team" class="team section light-background">
 
-      <!-- Section Title -->
+
       <div class="container section-title" data-aos="fade-up">
         <h2>Team</h2>
         <p>CHECK OUR TEAM</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container">
 
@@ -890,7 +889,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Team Member -->
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
@@ -906,7 +905,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Team Member -->
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
@@ -922,13 +921,13 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Team Member -->
+          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Team Section -->
+    </section>  /Team Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
