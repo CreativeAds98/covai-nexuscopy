@@ -56,9 +56,11 @@
     <li>
       <a href="product1.html"  style="background-color:  #2baf66;">Back Office 4.0</a>
     </li>
+   <!--  
     <li>
-      <a href="product2.html">Connected Enterprise Studio</a>
+       <a href="product2.html">Connected Enterprise Studio</a>  
     </li>
+    -->
   </ul>
 </li>
           <li><a href="#about">About</a></li>
@@ -118,7 +120,7 @@
             <strong>Why Us</strong>
          
           <ul>
-            <li><span>● 98%+ accuracy across A/P, A/R, Payroll, GL, and Reporting</span></li>
+            <li><span>● 98%+ accuracy across AP, AR, Payroll, GL, and Reporting</span></li>
             <li><span>● SLA compliance > 100% through real-time dashboards</span></li>
             <li><span>● Continuous improvement powered by Kaizen and automation</span></li>
             <li><span>● Policy-trained GenAI copilots built for contextual understanding</span></li>
@@ -971,37 +973,38 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
-              <div class="row gy-4">
+<!-- Contact Form -->
+<div class="col-lg-6">
+  <form id="contact-form" action="https://formspree.io/f/mblzjlvo" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+    <div class="row gy-4">
 
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
+      <div class="col-md-6">
+        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+      </div>
 
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
+      <div class="col-md-6">
+        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+      </div>
 
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
+      <div class="col-md-12">
+        <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+      </div>
 
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
-                </div>
+      <div class="col-md-12">
+        <textarea class="form-control" name="message" rows="4" placeholder="Message" required></textarea>
+      </div>
 
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+      <div class="col-md-12 text-center">
+        <button type="submit">Send</button>
+      </div>
 
-                  <button type="submit">Send Message</button>
-                </div>
+      <!-- Success / Error message -->
+      <div id="contact-message" class="mt-3" style="display:none;"></div>
 
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
+    </div>
+  </form>
+</div>
+          <!-- End Contact Form -->
 
         </div>
 
@@ -1052,16 +1055,20 @@
           </ul>
         </div>
 
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
-        </div>
+<!-- Newsletter Form -->
+<div class="col-lg-4 col-md-12 footer-newsletter">
+  <h4>Our Newsletter</h4>
+  <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+  <form id="newsletter-form" action="https://formspree.io/f/xkgqnond" method="POST" class="php-email-form">
+    <div class="newsletter-form">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <input type="submit" value="Subscribe">
+    </div>
+    <!-- Success / Error message -->
+    <p id="newsletter-message" style="display:none; color: green; margin-top:10px;"></p>
+  </form>
+</div>
+          <!-- End Newsletter Form -->
 
       </div>
     </div>
@@ -1090,6 +1097,69 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+// Contact Form Script
+document.getElementById("contact-form").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const formData = new FormData(form);
+  const messageBox = document.getElementById("contact-message");
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      messageBox.style.display = "block";
+      messageBox.style.color = "green";
+      messageBox.innerHTML = "✅ Thank you! Your message has been sent successfully.";
+      form.reset();
+    } else {
+      messageBox.style.display = "block";
+      messageBox.style.color = "red";
+      messageBox.innerHTML = "❌ Oops! Something went wrong. Please try again.";
+    }
+  } catch (error) {
+    messageBox.style.display = "block";
+    messageBox.style.color = "red";
+    messageBox.innerHTML = "❌ Oops! Something went wrong. Please try again.";
+  }
+});
+
+// Newsletter Form Script
+document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const formData = new FormData(form);
+  const messageBox = document.getElementById("newsletter-message");
+
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      messageBox.style.display = "block";
+      messageBox.style.color = "green";
+      messageBox.innerText = "✅ Thank you for subscribing!";
+      form.reset();
+    } else {
+      response.json().then(data => {
+        messageBox.style.display = "block";
+        messageBox.style.color = "red";
+        messageBox.innerText = data.error || "❌ Oops! There was a problem.";
+      });
+    }
+  }).catch(error => {
+    messageBox.style.display = "block";
+    messageBox.style.color = "red";
+    messageBox.innerText = "❌ Oops! There was a problem.";
+  });
+});
+</script>
 
 </body>
 
